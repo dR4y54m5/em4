@@ -1,0 +1,13 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+
+[workspace.dependencies]
+machine-core = { path = "crates/machine-core" }
+enigma       = { path = "crates/enigma" }
+clap         = { version = "4", features = ["derive"] }
+proptest     = "1"

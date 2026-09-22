@@ -1,0 +1,7 @@
+[package]
+name = "enigma"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+machine-core = { workspace = true }
