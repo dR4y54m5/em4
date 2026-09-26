@@ -5,3 +5,6 @@ version.workspace = true
 
 [dependencies]
 machine-core = { workspace = true }
+
+[dev-dependencies]
+machine-core = { workspace = true }

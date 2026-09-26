@@ -4,3 +4,6 @@ edition.workspace = true
 version.workspace = true
 
 [dependencies]
+enigma = { path = "../enigma" }
+machine-core = { workspace = true }
+clap = { workspace = true }
