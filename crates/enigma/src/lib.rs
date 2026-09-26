@@ -1,5 +1,12 @@
+#![cfg_attr(not(test), no_std)]
+
+extern crate alloc;
+
 mod data;
 
+use alloc::format;
+use alloc::string::{String, ToString};
+use alloc::vec::Vec;
 use machine_core::{FixedScrambler, Letter, Plugboard, Reflector, Rotor, step_stack};
 
 pub struct Enigma {

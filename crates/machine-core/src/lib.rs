@@ -1,4 +1,9 @@
-use std::array::from_fn;
+#![cfg_attr(not(test), no_std)]
+
+extern crate alloc;
+
+use alloc::vec::Vec;
+use core::array::from_fn;
 
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Hash)]
 pub struct Letter(u8);
@@ -444,7 +449,7 @@ pub struct FixedScrambler([u8; 26]);
 
 impl FixedScrambler {
     pub fn from_fn(mut f: impl FnMut(Letter) -> Letter) -> FixedScrambler {
-        FixedScrambler(std::array::from_fn(|i| f(Letter::new(i as u8).unwrap()).index() as u8))
+        FixedScrambler(core::array::from_fn(|i| f(Letter::new(i as u8).unwrap()).index() as u8))
     }
 }
 

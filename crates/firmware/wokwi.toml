@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+elf = "target/riscv32imc-unknown-none-elf/debug/firmware"
+firmware = "target/riscv32imc-unknown-none-elf/debug/firmware"

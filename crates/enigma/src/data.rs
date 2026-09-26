@@ -1,3 +1,4 @@
+use alloc::vec::Vec;
 use machine_core::{Letter, Reflector, Wiring};
 
 // Historical Enigma wirings (I–VIII, Beta, Gamma). Notches given as the window letters.
