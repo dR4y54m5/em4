@@ -8,8 +8,17 @@ fn cipher() -> Command {
 fn cli_reproduces_bdzgo() {
     let out = cipher()
         .args([
-            "enigma", "--rotors", "I,II,III", "--reflector", "B", "--rings", "AAA", "--positions",
-            "AAA", "--text", "AAAAA",
+            "enigma",
+            "--rotors",
+            "I,II,III",
+            "--reflector",
+            "B",
+            "--rings",
+            "AAA",
+            "--positions",
+            "AAA",
+            "--text",
+            "AAAAA",
         ])
         .output()
         .unwrap();
@@ -20,8 +29,17 @@ fn cli_reproduces_bdzgo() {
 fn cli_rejects_bad_reflector() {
     let out = cipher()
         .args([
-            "enigma", "--rotors", "I,II,III", "--reflector", "Z", "--rings", "AAA", "--positions",
-            "AAA", "--text", "A",
+            "enigma",
+            "--rotors",
+            "I,II,III",
+            "--reflector",
+            "Z",
+            "--rings",
+            "AAA",
+            "--positions",
+            "AAA",
+            "--text",
+            "A",
         ])
         .output()
         .unwrap();

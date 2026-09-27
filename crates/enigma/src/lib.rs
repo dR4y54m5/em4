@@ -89,7 +89,10 @@ impl Enigma {
             .build()
     }
 
-    pub fn scrambler_at(settings: &EnigmaSettings, k: usize) -> Result<FixedScrambler, EnigmaError> {
+    pub fn scrambler_at(
+        settings: &EnigmaSettings,
+        k: usize,
+    ) -> Result<FixedScrambler, EnigmaError> {
         let mut bare = settings.clone();
         bare.plugboard = String::new();
         let mut m = Enigma::from_settings(bare)?;
@@ -114,7 +117,10 @@ impl Enigma {
     }
 
     pub fn greek_window(&self) -> char {
-        self.greek.as_ref().map(|g| char::from(g.pos())).unwrap_or('-')
+        self.greek
+            .as_ref()
+            .map(|g| char::from(g.pos()))
+            .unwrap_or('-')
     }
 
     fn scramble_no_step(&self, c: Letter) -> Letter {

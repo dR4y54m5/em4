@@ -440,7 +440,6 @@ mod stepping_tests {
     }
 }
 
-
 pub trait Scrambler {
     fn map(&self, l: Letter) -> Letter;
 }
@@ -449,7 +448,9 @@ pub struct FixedScrambler([u8; 26]);
 
 impl FixedScrambler {
     pub fn from_fn(mut f: impl FnMut(Letter) -> Letter) -> FixedScrambler {
-        FixedScrambler(core::array::from_fn(|i| f(Letter::new(i as u8).unwrap()).index() as u8))
+        FixedScrambler(core::array::from_fn(|i| {
+            f(Letter::new(i as u8).unwrap()).index() as u8
+        }))
     }
 }
 
