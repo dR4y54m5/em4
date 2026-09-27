@@ -1,0 +1,4 @@
+{
+  // firmware is excluded from the Cargo workspace, so rust-analyzer must be pointed at it.
+  "rust-analyzer.linkedProjects": ["Cargo.toml", "crates/firmware/Cargo.toml"]
+}
