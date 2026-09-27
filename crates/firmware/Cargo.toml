@@ -6,6 +6,8 @@ edition = "2021"
 [[bin]]
 name = "firmware"
 path = "src/main.rs"
+test = false
+bench = false
 
 [dependencies]
 machine-core = { path = "../machine-core" }
